@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Dodaj nowy punkt</title>
+</head>
+<body>
+  <h1>Dodawanie nowego punktu</h1>
+  <nav>
+    <a href="{{ url_for('main.home') }}">Powrót na stronę główną</a>
+  </nav>
+  <hr>
+
+  <form action="{{ url_for('main.add') }}" method="POST">
+    <p>
+      <label for="feature1">Feature1:</label><br>
+      <input id="feature1" name="feature1" type="text">
+    </p>
+
+    <p>
+      <label for="feature2">Feature2:</label><br>
+      <input id="feature2" name="feature2" type="text">
+    </p>
+
+    <p>
+      <label for="category">Category (integer):</label><br>
+      <input id="category" name="category" type="text">
+    </p>
+
+    <button type="submit">Dodaj</button>
+  </form>
+</body>
+</html>
