@@ -26,7 +26,7 @@ def add():
 def delete(record_id):
     point_to_delete = DataPoint.query.get(record_id)
     if not point_to_delete:
-        return render_template('error_400.jinja'), 400
+        return render_template('error_404.jinja'), 404
     db.session.delete(point_to_delete)
     db.session.commit()
     return redirect(url_for('main.home'))
