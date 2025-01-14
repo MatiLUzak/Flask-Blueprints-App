@@ -22,7 +22,7 @@ def add():
         db.session.add(new_point)
         db.session.commit()
         return redirect(url_for('main.home'))
-@main_bp.route('/delete/<int:record_id>', methods=['GET', 'POST'])
+@main_bp.route('/delete/<int:record_id>', methods=['POST'])
 def delete(record_id):
     point_to_delete = DataPoint.query.get(record_id)
     if not point_to_delete:

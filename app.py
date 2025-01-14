@@ -5,7 +5,7 @@ from blueprints.main import main_bp
 from blueprints.api import api_bp
 
 def create_app():
-    app = Flask(__name__,template_folder='templates', static_folder='static')
+    app = Flask(__name__,template_folder='templates')
     app.config.from_object(Config)
     db.init_app(app)
     app.register_blueprint(main_bp)
