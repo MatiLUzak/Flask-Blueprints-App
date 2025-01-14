@@ -2,12 +2,12 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Lista punktów</title>
+  <title>Points list</title>
 </head>
 <body>
-  <h1>Wszystkie rekordy w bazie</h1>
+  <h1>All records in the database</h1>
   <nav>
-    <a href="{{ url_for('main.add') }}">Dodaj nowy punkt</a>
+    <a href="{{ url_for('main.add') }}">Add a new point</a>
   </nav>
   <hr>
 
@@ -19,7 +19,7 @@
         <th>Feature1</th>
         <th>Feature2</th>
         <th>Category</th>
-        <th>Usuń</th>
+        <th>Delete</th>
       </tr>
     </thead>
     <tbody>
@@ -32,7 +32,7 @@
         <td>{{ dp.category }}</td>
         <td>
           <form action="{{ url_for('main.delete', record_id=dp.id) }}" method="POST">
-            <button type="submit">Usuń</button>
+            <button type="submit">Delete</button>
           </form>
         </td>
       </tr>
