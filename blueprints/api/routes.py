@@ -26,7 +26,7 @@ def create_data():
     db.session.add(new_point)
     db.session.commit()
 
-    return jsonify({"id": new_point.id}), 200
+    return jsonify({"id": new_point.id})
 
 @api_bp.route('/data/<int:record_id>', methods=['DELETE'])
 def delete_data(record_id):
@@ -36,4 +36,4 @@ def delete_data(record_id):
 
     db.session.delete(point_to_delete)
     db.session.commit()
-    return jsonify({"deleted_id": record_id}), 200
+    return jsonify({"deleted_id": record_id})
